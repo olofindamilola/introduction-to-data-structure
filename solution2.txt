@@ -1,0 +1,38 @@
+Solution 2:
+
+Define a dot_product function that takes two vectors v1 and v2 as parameters
+Initialize a variable ps to 0
+Loop through the vectors and for each corresponding element:
+a. Multiply the elements together
+b. Add the product to ps
+Return the value of ps as output
+Algorithm for dot_product in pseudocode:
+
+function dot_product(v1, v2):
+    ps = 0
+    for i in range(len(v1)):
+        ps += v1[i] * v2[i]
+    return ps
+
+Define a function orthogonal_vectors that takes n pairs of vectors as input
+For each pair of vectors, call the dot_product function and check if the result is 0
+If the result is 0, print that the vectors are orthogonal. Otherwise, print that the vectors are not orthogonal.
+Algorithm for orthogonal_vectors in pseudocode:
+
+function orthogonal_vectors(n, vectors):
+    for i in range(n):
+        v1 = vectors[i][0]
+        v2 = vectors[i][1]
+        ps = dot_product(v1, v2)
+        if ps == 0:
+            print("Vectors", v1, "and", v2, "are orthogonal")
+        else:
+            print("Vectors", v1, "and", v2, "are not orthogonal")
+
+Call the orthogonal_vectors function with the desired number of vector pairs and the vectors themselves.
+Note: In the above algorithm, it is assumed that the vectors have the same length.
+
+
+
+
+
