@@ -1,0 +1,24 @@
+Solution 1:
+
+Create an empty set to hold distinct elements
+Loop through set 1 and for each element:
+a. Check if the element is not in the distinct set
+b. If it's not, add it to the distinct set
+Loop through set 2 and for each element:
+a. Check if the element is not in the distinct set
+b. If it's not, add it to the distinct set
+Sum all the elements in the distinct set and return the result as output
+Algorithm in pseudocode:
+
+function sum_of_distinct_elements(set1, set2):
+    distinct_set = set()
+    for element in set1:
+        if element not in distinct_set:
+            distinct_set.add(element)
+    for element in set2:
+        if element not in distinct_set:
+            distinct_set.add(element)
+    sum = 0
+    for element in distinct_set:
+        sum += element
+    return sum
